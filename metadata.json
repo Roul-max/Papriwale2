@@ -1,0 +1,6 @@
+{
+  "name": "Papriwale Sweets",
+  "description": "Celebrating 65+ Years of Sweet Heritage from Buxar, Bihar. Traditional handmade papri.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
