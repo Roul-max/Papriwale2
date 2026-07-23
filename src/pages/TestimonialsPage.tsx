@@ -23,8 +23,8 @@ export default function TestimonialsPage() {
       <div className="relative bg-cream py-20 md:py-28 border-b border-gold/20 overflow-hidden">
         <div className="absolute inset-0 text-gold/5 text-[20rem] font-serif flex items-center justify-center select-none pointer-events-none leading-none">❈</div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <span className="text-terracotta text-xs tracking-[0.2em] uppercase font-semibold mb-4 block">What Our Customers Say</span>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-text-dark mb-6">Testimonials</h1>
+          <span className="font-sc text-terracotta text-[11px] tracking-[0.25em] uppercase mb-4 block">What Our Customers Say</span>
+          <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-light text-text-dark mb-6">Testimonials</h1>
           <div className="flex items-center justify-center">
             <div className="h-px w-16 bg-gold/40"></div>
             <span className="text-gold mx-4">❈</span>
@@ -44,30 +44,30 @@ export default function TestimonialsPage() {
               { value: '50+', label: 'Cities Delivered' },
             ].map(({ value, label }) => (
               <div key={label}>
-                <div className="font-serif text-4xl md:text-5xl text-gold mb-2">{value}</div>
-                <div className="text-[10px] tracking-widest uppercase text-cream/80">{label}</div>
+                <div className="font-serif text-4xl md:text-5xl text-gold mb-2 font-light">{value}</div>
+                <div className="font-sc text-[10px] tracking-[0.22em] uppercase text-cream/90">{label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Featured Testimonial */}
+      {/* Featured */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div key={featured} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="bg-cream border border-gold/20 p-10 md:p-16 text-center shadow-sm">
             <div className="text-gold/30 font-serif text-8xl leading-none mb-4">"</div>
-            <p className="font-serif italic text-xl md:text-2xl lg:text-3xl text-text-dark leading-relaxed mb-8">
+            <p className="font-serif italic text-2xl md:text-3xl text-text-dark leading-relaxed mb-8 font-medium">
               {testimonials[featured].text}
             </p>
-            <div className="flex justify-center mb-3">
+            <div className="flex justify-center mb-4">
               {[...Array(testimonials[featured].rating)].map((_, i) => <Star key={i} className="w-4 h-4 text-gold fill-gold" />)}
             </div>
-            <p className="font-semibold text-text-dark text-sm tracking-wide">{testimonials[featured].name}</p>
-            <p className="text-text-dark/50 text-xs tracking-widest uppercase mt-1">{testimonials[featured].location}</p>
+            <p className="font-serif text-base font-medium text-text-dark">{testimonials[featured].name}</p>
+            <p className="font-sc text-[10px] tracking-[0.22em] uppercase text-text-dark/65 mt-1">{testimonials[featured].location}</p>
           </motion.div>
           <div className="flex justify-center gap-2 mt-6">
-            {testimonials.slice(0, 9).map((_, i) => (
+            {testimonials.map((_, i) => (
               <button key={i} onClick={() => setFeatured(i)} className={`w-2 h-2 rounded-full transition-colors ${i === featured ? 'bg-terracotta' : 'bg-gold/30 hover:bg-gold/60'}`} />
             ))}
           </div>
@@ -79,21 +79,14 @@ export default function TestimonialsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
-              <motion.div
-                key={t.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: i * 0.07 }}
-                className="bg-cream border border-gold/20 p-7 hover:shadow-md transition-shadow cursor-pointer"
-                onClick={() => setFeatured(i)}
-              >
+              <motion.div key={t.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.07 }} className="bg-cream border border-gold/20 p-7 hover:shadow-md transition-shadow cursor-pointer" onClick={() => setFeatured(i)}>
                 <div className="flex mb-3">
                   {[...Array(t.rating)].map((_, j) => <Star key={j} className="w-3.5 h-3.5 text-gold fill-gold" />)}
                 </div>
-                <p className="text-text-dark/80 text-sm leading-relaxed mb-5 line-clamp-4">"{t.text}"</p>
+                <p className="text-text-dark/80 text-sm leading-relaxed mb-5 line-clamp-4 font-light">"{t.text}"</p>
                 <div>
-                  <p className="font-semibold text-text-dark text-sm">{t.name}</p>
-                  <p className="text-text-dark/50 text-[10px] tracking-widest uppercase mt-0.5">{t.location}</p>
+                  <p className="font-serif text-base font-medium text-text-dark">{t.name}</p>
+                  <p className="font-sc text-[10px] tracking-[0.2em] uppercase text-text-dark/65 mt-0.5">{t.location}</p>
                 </div>
               </motion.div>
             ))}

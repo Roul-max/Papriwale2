@@ -9,12 +9,34 @@
   --color-text-dark: #2B2118;
   --color-gold: #C9A15A;
   --color-blush: #D98A8A;
-  --font-serif: "Playfair Display", serif;
-  --font-sans: "Montserrat", sans-serif;
+  --font-serif: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --font-sans: "Jost", system-ui, sans-serif;
+  --font-sc: "Cormorant SC", "Cormorant Garamond", serif;
 }
 
 body {
   background-color: var(--color-cream-light);
   color: var(--color-text-dark);
   font-family: var(--font-sans);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.01em;
+}
+
+/* Cormorant renders better slightly larger */
+.font-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0.01em;
+}
+
+/* Small caps for labels, tags, nav */
+.font-sc {
+  font-family: var(--font-sc);
+  letter-spacing: 0.08em;
+}
+
+/* Tighten tracking on large serif headings */
+h1.font-serif, h2.font-serif {
+  letter-spacing: -0.01em;
 }

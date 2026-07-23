@@ -4,12 +4,12 @@ import { motion } from 'motion/react';
 export default function AboutPage() {
   return (
     <div className="bg-cream-light min-h-screen">
-      {/* Hero Banner */}
+      {/* Banner */}
       <div className="relative bg-cream py-20 md:py-28 border-b border-gold/20 overflow-hidden">
         <div className="absolute inset-0 text-gold/5 text-[20rem] font-serif flex items-center justify-center select-none pointer-events-none leading-none">❈</div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <span className="text-terracotta text-xs tracking-[0.2em] uppercase font-semibold mb-4 block">Our Story</span>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-text-dark mb-6">About Us</h1>
+          <span className="font-sc text-terracotta text-[11px] tracking-[0.25em] uppercase mb-4 block">Our Story</span>
+          <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-light text-text-dark mb-6">About Us</h1>
           <div className="flex items-center justify-center">
             <div className="h-px w-16 bg-gold/40"></div>
             <span className="text-gold mx-4">❈</span>
@@ -23,9 +23,9 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-              <span className="text-terracotta text-xs tracking-[0.2em] uppercase font-semibold mb-4 block">The Beginning</span>
-              <h2 className="font-serif text-4xl md:text-5xl mb-8 text-text-dark">A Legacy Born in 1958</h2>
-              <div className="space-y-5 text-text-dark/80 text-sm md:text-base leading-relaxed">
+              <span className="font-sc text-terracotta text-[11px] tracking-[0.25em] uppercase mb-4 block">The Beginning</span>
+              <h2 className="font-serif text-5xl md:text-6xl font-light mb-8 text-text-dark">A Legacy Born in 1958</h2>
+              <div className="space-y-5 text-text-dark/80 text-sm md:text-base leading-relaxed font-light">
                 <p>Papriwale was founded in 1958 by Shri Badrinarayan ji in the historic city of Buxar, Bihar. With nothing but a small hearth, pure ingredients, and an unwavering commitment to quality, he began crafting papri that would become the pride of the region.</p>
                 <p>His philosophy was simple: use only the finest ingredients — pure ghee, natural sugars, and freshly ground spices — and let the tradition speak for itself. No shortcuts, no compromises.</p>
                 <p>Today, three generations later, the same values guide every batch of papri we make. The recipes remain unchanged, the methods remain handcrafted, and the love remains as pure as ever.</p>
@@ -37,7 +37,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 border border-white/40 pointer-events-none m-4"></div>
                 <div className="mt-4 text-center pb-2">
                   <p className="font-serif text-lg">पपरीवाले — Buxar, Bihar</p>
-                  <p className="text-[10px] tracking-widest uppercase text-text-dark/60 mt-1">ESTD. 1958</p>
+                  <p className="font-sc text-[9px] tracking-[0.25em] uppercase text-text-dark/50 mt-1">ESTD. 1958</p>
                 </div>
               </div>
             </motion.div>
@@ -49,8 +49,8 @@ export default function AboutPage() {
       <section className="bg-cream py-20 border-t border-gold/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-terracotta text-xs tracking-[0.2em] uppercase font-semibold mb-3 block">What We Stand For</span>
-            <h2 className="font-serif text-3xl md:text-4xl text-text-dark">Our Core Values</h2>
+            <span className="font-sc text-terracotta text-[11px] tracking-[0.25em] uppercase mb-3 block">What We Stand For</span>
+            <h2 className="font-serif text-4xl md:text-5xl font-light text-text-dark">Our Core Values</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
@@ -60,8 +60,8 @@ export default function AboutPage() {
             ].map(({ title, desc }) => (
               <div key={title} className="text-center p-8 border border-gold/20 bg-cream-light">
                 <div className="text-gold text-3xl mb-4">❈</div>
-                <h3 className="font-serif text-2xl mb-4 text-text-dark">{title}</h3>
-                <p className="text-text-dark/70 text-sm leading-relaxed">{desc}</p>
+                <h3 className="font-serif text-3xl font-light mb-4 text-text-dark">{title}</h3>
+                <p className="text-text-dark/80 text-sm leading-relaxed font-light">{desc}</p>
               </div>
             ))}
           </div>
@@ -72,8 +72,8 @@ export default function AboutPage() {
       <section className="py-20 md:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-terracotta text-xs tracking-[0.2em] uppercase font-semibold mb-3 block">Our Journey</span>
-            <h2 className="font-serif text-3xl md:text-4xl text-text-dark">Milestones Through the Years</h2>
+            <span className="font-sc text-terracotta text-[11px] tracking-[0.25em] uppercase mb-3 block">Our Journey</span>
+            <h2 className="font-serif text-4xl md:text-5xl font-light text-text-dark">Milestones Through the Years</h2>
           </div>
           <div className="space-y-0">
             {[
@@ -85,13 +85,13 @@ export default function AboutPage() {
             ].map(({ year, title, desc }, i) => (
               <div key={year} className="flex gap-8 items-start">
                 <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-terracotta text-white flex items-center justify-center text-xs font-bold tracking-wider shrink-0">{year.slice(2)}'</div>
+                  <div className="w-12 h-12 rounded-full bg-terracotta text-white flex items-center justify-center font-sc text-[10px] tracking-widest shrink-0">{year.slice(2)}'</div>
                   {i < 4 && <div className="w-px h-16 bg-gold/30 mt-2"></div>}
                 </div>
                 <div className="pb-12">
-                  <span className="text-terracotta text-xs tracking-widest uppercase font-semibold">{year}</span>
-                  <h3 className="font-serif text-xl mt-1 mb-2 text-text-dark">{title}</h3>
-                  <p className="text-text-dark/70 text-sm leading-relaxed">{desc}</p>
+                  <span className="font-sc text-terracotta text-[10px] tracking-[0.25em] uppercase">{year}</span>
+                  <h3 className="font-serif text-2xl mt-1 mb-2 text-text-dark font-medium">{title}</h3>
+                  <p className="text-text-dark/80 text-sm leading-relaxed font-light">{desc}</p>
                 </div>
               </div>
             ))}

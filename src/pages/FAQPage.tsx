@@ -43,13 +43,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   return (
     <div className="border-b border-gold/20 last:border-0">
       <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between py-5 text-left gap-4">
-        <span className="font-serif text-base md:text-lg text-text-dark">{q}</span>
+        <span className="font-serif text-lg md:text-xl font-medium text-text-dark">{q}</span>
         <ChevronDown className={`w-5 h-5 text-terracotta shrink-0 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} />
       </button>
       <AnimatePresence>
         {open && (
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
-            <p className="text-text-dark/70 text-sm leading-relaxed pb-5">{a}</p>
+            <p className="text-text-dark/80 text-sm leading-relaxed pb-5 font-light">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -64,14 +64,14 @@ export default function FAQPage() {
       <div className="relative bg-cream py-20 md:py-28 border-b border-gold/20 overflow-hidden">
         <div className="absolute inset-0 text-gold/5 text-[20rem] font-serif flex items-center justify-center select-none pointer-events-none leading-none">❈</div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <span className="text-terracotta text-xs tracking-[0.2em] uppercase font-semibold mb-4 block">Got Questions?</span>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-text-dark mb-6">FAQ</h1>
+          <span className="font-sc text-terracotta text-[11px] tracking-[0.25em] uppercase mb-4 block">Got Questions?</span>
+          <h1 className="font-serif text-6xl md:text-7xl lg:text-8xl font-light text-text-dark mb-6">FAQ</h1>
           <div className="flex items-center justify-center">
             <div className="h-px w-16 bg-gold/40"></div>
             <span className="text-gold mx-4">❈</span>
             <div className="h-px w-16 bg-gold/40"></div>
           </div>
-          <p className="mt-6 text-text-dark/70 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="mt-6 text-text-dark/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed font-light">
             Everything you need to know about our products, orders, and delivery. Can't find your answer? Reach out to us directly.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function FAQPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
           {faqs.map(({ category, items }) => (
             <div key={category}>
-              <h2 className="font-serif text-2xl md:text-3xl text-text-dark mb-6 pb-4 border-b border-gold/30 flex items-center gap-3">
+              <h2 className="font-serif text-3xl md:text-4xl font-light text-text-dark mb-6 pb-4 border-b border-gold/30 flex items-center gap-3">
                 <span className="text-gold text-lg">❈</span> {category}
               </h2>
               <div>
@@ -93,18 +93,14 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* Still have questions */}
+      {/* CTA */}
       <section className="bg-cream border-t border-gold/20 py-16">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <h3 className="font-serif text-2xl md:text-3xl mb-4 text-text-dark">Still Have Questions?</h3>
-          <p className="text-text-dark/70 text-sm leading-relaxed mb-8">Our team is happy to help. Reach out to us and we will get back to you within 24 hours.</p>
+          <h3 className="font-serif text-3xl md:text-4xl font-light mb-4 text-text-dark">Still Have Questions?</h3>
+          <p className="text-text-dark/80 text-sm leading-relaxed mb-8 font-light">Our team is happy to help. Reach out to us and we will get back to you within 24 hours.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:hello@papriwale.com" className="bg-terracotta text-white hover:bg-terracotta-dark transition-colors px-8 py-4 text-xs tracking-widest uppercase font-medium">
-              Email Us
-            </a>
-            <a href="tel:+919155222222" className="border border-terracotta text-terracotta hover:bg-terracotta hover:text-white transition-colors px-8 py-4 text-xs tracking-widest uppercase font-medium">
-              Call Us
-            </a>
+            <a href="mailto:hello@papriwale.com" className="bg-terracotta text-white hover:bg-terracotta-dark transition-colors px-8 py-4 font-sc text-[11px] tracking-[0.25em] uppercase">Email Us</a>
+            <a href="tel:+919155222222" className="border border-terracotta text-terracotta hover:bg-terracotta hover:text-white transition-colors px-8 py-4 font-sc text-[11px] tracking-[0.25em] uppercase">Call Us</a>
           </div>
         </div>
       </section>

@@ -61,7 +61,7 @@ export default function App() {
     <div className="min-h-screen bg-cream-light font-sans text-text-dark selection:bg-terracotta selection:text-white">
 
       {/* Top Utility Bar */}
-      <div className="w-full bg-terracotta-dark text-white text-[10px] md:text-xs tracking-widest uppercase py-2 px-4">
+      <div className="w-full bg-terracotta-dark text-white text-[10px] md:text-[11px] tracking-[0.2em] uppercase py-2 px-4 font-sc">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-1 md:gap-0">
           <span>Celebrating 65+ Years of Sweet Heritage from Buxar, Bihar</span>
           <span>Delivering Tradition Across India & Worldwide</span>
@@ -78,12 +78,12 @@ export default function App() {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-8 text-[11px] lg:text-xs tracking-widest font-medium uppercase">
+          <nav className="hidden md:flex items-center space-x-7 text-[13px] lg:text-[14px] tracking-[0.12em] font-sc uppercase">
             {navLinks.map(({ label, page }) => (
               <button
                 key={page}
                 onClick={() => navigate(page)}
-                className={`transition-colors hover:text-terracotta ${currentPage === page ? 'text-terracotta' : 'text-text-dark'}`}
+                className={`font-semibold transition-colors hover:text-terracotta ${currentPage === page ? 'text-terracotta' : 'text-text-dark'}`}
               >
                 {label}
               </button>
@@ -122,14 +122,14 @@ export default function App() {
               <button
                 key={page}
                 onClick={() => navigate(page)}
-                className={`text-sm tracking-widest uppercase font-medium text-left transition-colors hover:text-terracotta ${currentPage === page ? 'text-terracotta' : 'text-text-dark'}`}
+                className={`font-sc text-[14px] tracking-[0.12em] uppercase font-semibold text-left transition-colors hover:text-terracotta ${currentPage === page ? 'text-terracotta' : 'text-text-dark'}`}
               >
                 {label}
               </button>
             ))}
             <div className="flex space-x-4 pt-4 border-t border-gold/20">
-              <button onClick={() => { setSearchOpen(true); setIsMenuOpen(false); }} className="flex items-center text-xs tracking-widest uppercase"><Search className="w-4 h-4 mr-2" /> Search</button>
-              <button onClick={() => { setProfileOpen(true); setIsMenuOpen(false); }} className="flex items-center text-xs tracking-widest uppercase"><User className="w-4 h-4 mr-2" /> Account</button>
+              <button onClick={() => { setSearchOpen(true); setIsMenuOpen(false); }} className="flex items-center font-sc text-[12px] tracking-[0.12em] uppercase font-semibold text-text-dark"><Search className="w-4 h-4 mr-2" /> Search</button>
+              <button onClick={() => { setProfileOpen(true); setIsMenuOpen(false); }} className="flex items-center font-sc text-[12px] tracking-[0.12em] uppercase font-semibold text-text-dark"><User className="w-4 h-4 mr-2" /> Account</button>
             </div>
           </motion.div>
         )}
@@ -148,7 +148,7 @@ export default function App() {
 
             <div className="space-y-6">
               <img src="/logo.png" alt="Papriwale Logo" className="h-28 w-auto object-contain -ml-2" />
-              <p className="text-sm text-text-dark/70 leading-relaxed max-w-xs">
+              <p className="text-sm text-text-dark/80 leading-relaxed max-w-xs font-medium">
                 Traditional sweetness since 1958. Handmade papri from Buxar, Bihar, with love and legacy.
               </p>
               <div className="flex space-x-4">
@@ -159,28 +159,28 @@ export default function App() {
             </div>
 
             <div>
-              <h4 className="text-xs tracking-widest uppercase font-bold mb-6 text-text-dark">Quick Links</h4>
+              <h4 className="font-sc text-[12px] tracking-[0.2em] uppercase font-bold mb-6 text-text-dark">Quick Links</h4>
               <ul className="space-y-3">
                 {navLinks.filter(l => l.page !== 'home').map(({ label, page }) => (
                   <li key={page}>
-                    <button onClick={() => navigate(page)} className="text-sm text-text-dark/70 hover:text-terracotta transition-colors">{label}</button>
+                    <button onClick={() => navigate(page)} className="text-sm text-text-dark/80 hover:text-terracotta transition-colors font-medium tracking-wide">{label}</button>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h4 className="text-xs tracking-widest uppercase font-bold mb-6 text-text-dark">Contact Us</h4>
+              <h4 className="font-sc text-[12px] tracking-[0.2em] uppercase font-bold mb-6 text-text-dark">Contact Us</h4>
               <ul className="space-y-4">
-                <li className="flex items-start"><Phone className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/70">+91 91552 22222</span></li>
-                <li className="flex items-start"><Mail className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/70">hello@papriwale.com</span></li>
-                <li className="flex items-start"><MapPin className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/70">Papriwale Sweets, Buxar, Bihar - 802101, India</span></li>
+                <li className="flex items-start"><Phone className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/85 font-medium">+91 91552 22222</span></li>
+                <li className="flex items-start"><Mail className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/85 font-medium">hello@papriwale.com</span></li>
+                <li className="flex items-start"><MapPin className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/85 font-medium">Papriwale Sweets, Buxar, Bihar - 802101, India</span></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-xs tracking-widest uppercase font-bold mb-6 text-text-dark">Stay Updated</h4>
-              <p className="text-sm text-text-dark/70 leading-relaxed mb-4">Subscribe to get updates on new arrivals, offers & more.</p>
+              <h4 className="font-sc text-[12px] tracking-[0.2em] uppercase font-bold mb-6 text-text-dark">Stay Updated</h4>
+              <p className="text-sm text-text-dark/80 leading-relaxed mb-4 font-medium">Subscribe to get updates on new arrivals, offers & more.</p>
               <form className="relative flex" onSubmit={(e) => e.preventDefault()}>
                 <input type="email" placeholder="Your email address" className="w-full bg-cream border border-gold/30 rounded-l-md px-4 py-3 text-sm focus:outline-none focus:border-terracotta transition-colors" required />
                 <button type="submit" className="bg-terracotta text-white px-4 rounded-r-md flex items-center justify-center hover:bg-terracotta-dark transition-colors" aria-label="Subscribe">
@@ -191,7 +191,7 @@ export default function App() {
 
           </div>
 
-          <div className="border-t border-gold/20 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-text-dark/60 gap-4 md:gap-0">
+          <div className="border-t border-gold/20 pt-6 flex flex-col md:flex-row justify-between items-center font-sc text-[11px] tracking-[0.15em] text-text-dark/70 gap-4 md:gap-0">
             <p>&copy; 2026 Papriwale. All Rights Reserved.</p>
             <div className="space-x-4">
               <a href="#" className="hover:text-terracotta transition-colors">Privacy Policy</a>
