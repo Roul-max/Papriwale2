@@ -3,15 +3,15 @@ import { Star } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const testimonials = [
-  { id: 1, name: 'Anjali S.', location: 'New Jersey, USA', rating: 5, text: 'The taste takes me back to my childhood in Bihar. Nothing compares to the authentic flavor of Papriwale papri. Pure, traditional, and simply the best! I order every month without fail.' },
-  { id: 2, name: 'Rajesh K.', location: 'Mumbai, Maharashtra', rating: 5, text: 'I have tried many sweet shops across India, but Papriwale is in a league of its own. The Classic Papri is absolutely divine — you can taste the pure ghee in every bite. Highly recommended!' },
+  { id: 1, name: 'Anjali S.', location: 'New Jersey, USA', rating: 5, text: 'The taste takes me back to my childhood in Bihar. Nothing compares to the authentic flavor of Papriwale papri — pure, traditional, and simply the best! I order every month without fail.' },
+  { id: 2, name: 'Rajesh K.', location: 'Mumbai, Maharashtra', rating: 5, text: 'I have tried many sweet shops across India, but Papriwale is in a league of its own. The Papri is absolutely divine — you can taste the pure desi ghee in every bite. Highly recommended!' },
   { id: 3, name: 'Priya M.', location: 'Bengaluru, Karnataka', rating: 5, text: 'Ordered the Festival Gift Box for Diwali and my entire family was blown away. The packaging was beautiful and the papri arrived perfectly fresh. Will definitely order again!' },
   { id: 4, name: 'Suresh T.', location: 'Toronto, Canada', rating: 5, text: 'Living abroad, I always missed the authentic taste of Bihari sweets. Papriwale ships internationally and the quality is outstanding. The Gur Papri is my absolute favourite.' },
   { id: 5, name: 'Meena D.', location: 'Delhi, India', rating: 5, text: 'My mother-in-law is from Buxar and she said this is exactly how papri used to taste in her childhood. That is the highest compliment I can give. Truly authentic and delicious.' },
   { id: 6, name: 'Vikram P.', location: 'Patna, Bihar', rating: 5, text: 'Being from Bihar myself, I am very particular about my papri. Papriwale never disappoints. The Til Papri during winter is something I look forward to every year.' },
-  { id: 7, name: 'Sunita R.', location: 'Hyderabad, Telangana', rating: 5, text: 'Gifted the Dry Fruit Papri to my colleagues and they were all asking where I got it from. The quality and taste are exceptional. A truly premium product.' },
+  { id: 7, name: 'Sunita R.', location: 'Hyderabad, Telangana', rating: 5, text: 'Gifted the Dry Fruit Papri to my colleagues and they were all asking where I got it from. The quality and taste are exceptional. A truly premium product at a very fair price.' },
   { id: 8, name: 'Amit B.', location: 'Buxar, Bihar', rating: 5, text: 'I grew up eating Papriwale papri and now my children love it too. Three generations of our family have been loyal customers. The taste has never changed — and that is exactly why we keep coming back.' },
-  { id: 9, name: 'Kavita J.', location: 'Pune, Maharashtra', rating: 5, text: 'The Elaichi Papri is absolutely fragrant and delicious. I love that there are no artificial flavors — you can taste the real cardamom. Will be ordering the gift box for my parents next.' },
+  { id: 9, name: 'Kavita J.', location: 'Pune, Maharashtra', rating: 5, text: 'No artificial flavors, no preservatives — you can taste the real ingredients. The papri is crispy, perfectly sweet, and absolutely addictive. Will be ordering the gift box for my parents next.' },
 ];
 
 export default function TestimonialsPage() {
@@ -38,10 +38,10 @@ export default function TestimonialsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              { value: '10,000+', label: 'Happy Customers' },
+              { value: '5,000+', label: 'Happy Customers' },
               { value: '4.9/5', label: 'Average Rating' },
-              { value: '65+', label: 'Years of Trust' },
-              { value: '50+', label: 'Cities Delivered' },
+              { value: '66+', label: 'Years of Trust' },
+              { value: '30+', label: 'Cities Delivered' },
             ].map(({ value, label }) => (
               <div key={label}>
                 <div className="font-serif text-4xl md:text-5xl text-gold mb-2 font-light">{value}</div>

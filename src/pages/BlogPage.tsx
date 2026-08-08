@@ -3,12 +3,10 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const posts = [
-  { id: 1, date: 'October 12, 2024', category: 'Heritage', title: 'The Art of Making Papri: A 65-Year-Old Tradition', excerpt: 'Step inside our kitchen and discover how every batch of papri is still made by hand, using the same techniques Badrinarayan ji perfected in 1958. From the quality of ghee to the precise temperature of the kadhai — every detail matters.', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop' },
-  { id: 2, date: 'September 5, 2024', category: 'Ingredients', title: 'Why Pure Desi Ghee Makes All the Difference', excerpt: 'In a world of shortcuts, we choose the longer path. Learn why we source only pure desi ghee from local dairy farmers in Bihar, and how it transforms the taste, texture, and shelf life of our papri.', image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=800&auto=format&fit=crop' },
-  { id: 3, date: 'August 20, 2024', category: 'Culture', title: 'Papri in Bihar: More Than Just a Sweet', excerpt: 'In Buxar and across Bihar, papri is not just a confection — it is a ritual. From Chhath Puja offerings to wedding trays, we explore the deep cultural significance of this humble sweet in Bihari life.', image: 'https://images.unsplash.com/photo-1605856422204-748eb27685ff?q=80&w=800&auto=format&fit=crop' },
-  { id: 4, date: 'July 14, 2024', category: 'Gifting', title: 'The Perfect Festive Gift: Our Guide to Gifting Papri', excerpt: 'Whether it is Diwali, Holi, or a family celebration, a box of Papriwale papri carries warmth, tradition, and love. Here is how to choose the right variety and packaging for every occasion.', image: 'https://images.unsplash.com/photo-1607344645866-009c320b63e0?q=80&w=800&auto=format&fit=crop' },
-  { id: 5, date: 'June 3, 2024', category: 'Story', title: 'From Buxar to New Jersey: How Papriwale Crossed Oceans', excerpt: "When Anjali ordered her first box from New Jersey, she cried. The taste was exactly as she remembered from her grandmother's kitchen. This is the story of how we began shipping internationally — and why it matters.", image: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=800&auto=format&fit=crop' },
-  { id: 6, date: 'May 18, 2024', category: 'Health', title: 'Natural Sweeteners: Gur vs. Sugar in Traditional Sweets', excerpt: 'Our Gur Papri uses pure jaggery instead of refined sugar. We break down the nutritional differences, the flavor profile, and why our ancestors were onto something truly special.', image: 'https://images.unsplash.com/photo-1621236166409-7eeb99276949?q=80&w=800&auto=format&fit=crop' },
+  { id: 1, date: 'October 12, 2024', category: 'Heritage', title: 'The Art of Making Papri: A 65-Year-Old Tradition', excerpt: 'Step inside our kitchen and discover how every batch of papri is still made by hand, using the same techniques Badrinarayan ji perfected in 1958. From the quality of ghee to the precise temperature of the kadhai — every detail matters.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_4ZG1Xe9XjesEgDaQBJPttnDlbnjTD-zO7NEcUYVCw&s=10' },
+  { id: 2, date: 'September 5, 2024', category: 'Ingredients', title: 'Why Pure Desi Ghee Makes All the Difference', excerpt: 'In a world of shortcuts, we choose the longer path. Learn why we source only pure desi ghee from local dairy farmers in Bihar, and how it transforms the taste, texture, and shelf life of our papri.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsWVttsfIQDEL_VRvmb6LnS9igXlgJ1AC1Nv2bry5nlg&s=10' },
+  { id: 3, date: 'August 20, 2024', category: 'Culture', title: 'Papri in Bihar: More Than Just a Sweet', excerpt: 'In Buxar and across Bihar, papri is not just a confection — it is a ritual. From Chhath Puja offerings to wedding trays, we explore the deep cultural significance of this humble sweet in Bihari life.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxKcYGqXH21P0PLqorxg8BswUIetFKYQ3AAHtnPyPNVw&s=10' },
+  { id: 4, date: 'July 14, 2024', category: 'Gifting', title: 'The Perfect Festive Gift: Our Guide to Gifting Papri', excerpt: 'Whether it is Diwali, Holi, or a family celebration, a box of Papriwale papri carries warmth, tradition, and love. Here is how to choose the right variety and packaging for every occasion.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrdlTyJ6GkybKZMAMOoQEBuUO1R_i-v3Y6IRxVtFRMBg&s' },
 ];
 
 export default function BlogPage() {
@@ -77,6 +75,35 @@ export default function BlogPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="bg-cream border-t border-gold/20 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="font-sc text-terracotta text-[11px] tracking-[0.25em] uppercase mb-4 block">Watch & Learn</span>
+            <h2 className="font-serif text-4xl md:text-5xl font-light text-text-dark mb-4">See the Craft in Action</h2>
+            <div className="flex items-center justify-center">
+              <div className="h-px w-16 bg-gold/40"></div>
+              <span className="text-gold mx-4">❈</span>
+              <div className="h-px w-16 bg-gold/40"></div>
+            </div>
+            <p className="mt-5 text-text-dark/70 text-sm max-w-lg mx-auto font-light leading-relaxed">
+              Go behind the scenes and witness how our papri is handcrafted with pure desi ghee and generations of love.
+            </p>
+          </div>
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="relative max-w-4xl mx-auto border border-gold/20 shadow-lg overflow-hidden">
+            <div className="aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/0zVV_exhWsE"
+                title="Papriwale — The Craft of Making Papri"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

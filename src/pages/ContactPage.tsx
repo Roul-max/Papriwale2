@@ -43,9 +43,9 @@ export default function ContactPage() {
 
               <div className="space-y-7">
                 {[
-                  { Icon: Phone, label: 'Phone', line1: '+91 91552 22222', line2: 'Mon–Sat, 9am–7pm IST' },
-                  { Icon: Mail, label: 'Email', line1: 'hello@papriwale.com', line2: 'We reply within 24 hours' },
-                  { Icon: MapPin, label: 'Address', line1: 'Papriwale Sweets', line2: 'Buxar, Bihar – 802101, India' },
+                  { Icon: Phone, label: 'Phone', line1: '+91 9955756111', line2: '+91 7004220994' },
+                  { Icon: Mail, label: 'Email', line1: 'saurabhsakg@gmail.com', line2: 'We reply within 24 hours' },
+                  { Icon: MapPin, label: 'Address', line1: 'Papriwale Sweets, Buxar', line2: 'Bihar – 802101, India' },
                   { Icon: Clock, label: 'Business Hours', line1: 'Monday – Saturday: 9:00 AM – 7:00 PM', line2: 'Sunday: 10:00 AM – 4:00 PM' },
                 ].map(({ Icon, label, line1, line2 }) => (
                   <div key={label} className="flex items-start gap-5">
@@ -105,6 +105,31 @@ export default function ContactPage() {
               </div>
             </motion.div>
 
+          </div>
+        </div>
+      </section>
+      {/* Map */}
+      <section className="border-t border-gold/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-8">
+            <span className="font-sc text-terracotta text-[11px] tracking-[0.25em] uppercase mb-3 block">Find Us</span>
+            <h2 className="font-serif text-3xl md:text-4xl font-light text-text-dark">Our Location</h2>
+          </div>
+          <div className="w-full border border-gold/20 shadow-sm overflow-hidden" style={{ height: '450px' }}>
+            <iframe
+              title="Papriwale Location"
+              src="https://maps.google.com/maps?cid=701233240623295903&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <div className="mt-4 flex items-center gap-2 text-text-dark/65 text-sm font-light">
+            <MapPin className="w-4 h-4 text-terracotta shrink-0" />
+            <span>Papriwale Sweets, Buxar, Bihar – 802101, India</span>
           </div>
         </div>
       </section>

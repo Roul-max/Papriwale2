@@ -4,10 +4,10 @@ import { motion } from 'motion/react';
 import { useApp } from '../context/AppContext';
 
 const products = [
-  { id: 1, name: 'Classic Papri', price: 450, weight: '500g', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvp7w69wWbNoO5smD9AVAQ313z-jNjntv4cbdqlidsVA&s=10' },
-  { id: 2, name: 'Elaichi Papri', price: 480, weight: '500g', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7YyCLadFYJ1ecU7b9WKC5iuU2DQZYGbqIE0qpIqoLQ&s=10' },
-  { id: 3, name: 'Gur Papri', price: 480, weight: '500g', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGlD8cjbdbXivGiDGi1tCx9YOFjTAOXJG47iUGfnacew&s=10' },
-  { id: 4, name: 'Til Papri', price: 450, weight: '500g', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTzdzpJp-Ev9AhDBPdUEvAopT9IM1yx8TSctqWyS0YQw&s=10' },
+  { id: 1, name: 'Kaju Badam Papri', price: 380, weight: '250g', image: 'https://i0.wp.com/papriwale.com/wp-content/uploads/2021/10/IMG_6312-copy_Original-scaled.jpg?resize=400%2C400&ssl=1' },
+  { id: 2, name: 'Kaju Papdi', price: 640, weight: '250g', image: 'https://i0.wp.com/papriwale.com/wp-content/uploads/2021/10/IMG_6296-copy_Original-scaled.jpg?resize=400%2C400&ssl=1' },
+  { id: 3, name: 'Special Ghee Papdi', price: 240, weight: '250g', image: 'https://i0.wp.com/papriwale.com/wp-content/uploads/2021/10/IMG_6291-copy_Original-scaled.jpg?resize=400%2C400&ssl=1' },
+  { id: 4, name: 'Dry Fruit Papri', price: 350, weight: '250g', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNCvgIkcCYT-CAZkQbAPgip51eSYD-PGFiIbe3QSd_I37ChRyTTMef1xS_&s=10' },
 ];
 
 export default function HomePage({ navigate }: { navigate: (page: string) => void }) {
@@ -23,16 +23,16 @@ export default function HomePage({ navigate }: { navigate: (page: string) => voi
                 <span className="w-8 h-px bg-terracotta mr-3"></span>Since 1958
               </span>
               <h2 className="font-serif text-6xl md:text-7xl lg:text-8xl font-semibold leading-[1.05] mb-6 text-text-dark">
-                Handmade Papri.<br /><span className="italic font-light">Timeless Tradition.</span>
+                Authentic Papri.<br /><span className="italic font-light">Pure & Traditional.</span>
               </h2>
               <p className="text-text-dark/65 text-base md:text-lg mb-8 max-w-md leading-relaxed font-light">
-                From the heart of Buxar, Bihar — crafted with purity, devotion, and 65+ years of legacy.
+                Handcrafted in Buxar, Bihar with pure desi ghee and natural ingredients — a family recipe cherished since 1958.
               </p>
               <button onClick={() => navigate('products')} className="bg-terracotta text-white hover:bg-terracotta-dark transition-colors px-8 py-4 font-sc text-[11px] tracking-[0.25em] uppercase flex items-center group">
                 Explore Our Papri <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
               <div className="mt-12 flex items-center gap-5">
-                <span className="font-serif text-5xl md:text-6xl text-gold font-light">65+</span>
+                <span className="font-serif text-5xl md:text-6xl text-gold font-light">66+</span>
                 <div className="flex flex-col gap-0.5">
                   <span className="font-sc text-[10px] tracking-[0.25em] uppercase text-terracotta">Years of</span>
                   <span className="font-sc text-[10px] tracking-[0.25em] uppercase text-text-dark/60">Heritage</span>
@@ -44,7 +44,7 @@ export default function HomePage({ navigate }: { navigate: (page: string) => voi
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} className="relative flex justify-center lg:justify-end">
               <div className="relative w-full max-w-[400px] lg:max-w-[480px] aspect-[3/4]">
                 <div className="absolute inset-0 bg-gold/10 overflow-hidden" style={{ borderRadius: '200px 200px 12px 12px' }}>
-                  <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=1200&auto=format&fit=crop" alt="Traditional Indian sweets" className="w-full h-full object-cover object-center" />
+                  <img src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlhW7fs_ya_JLM-sF5tQSugGOpVbK4rrbH4BZ6qti7EoIlM10Jay-IOZtfJw2AuJ4dJJ22JuhH9gi6Rapz3zcHyV7ldEQEv1UhOIIMgZG-bE5ntTksrCj2IK-ZnHwEBXgK2C_2uvPxXCl77=s1360-w1360-h1020-rw" alt="Traditional Indian sweets" className="w-full h-full object-cover object-center" />
                 </div>
                 <div className="absolute inset-0 border border-gold/30 pointer-events-none" style={{ borderRadius: '200px 200px 12px 12px', margin: '12px' }}></div>
                 <div className="absolute -bottom-6 -left-6 md:-left-12 w-36 h-36 md:w-44 md:h-44 rounded-full z-20" style={{ background: 'radial-gradient(circle at 60% 40%, #fffaf3, #faf0dc)' }}>
@@ -72,10 +72,10 @@ export default function HomePage({ navigate }: { navigate: (page: string) => voi
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x-0 md:divide-x divide-gold/20">
             {[
-              { Icon: Hand, title: 'Handmade', sub: 'Traditional Methods' },
-              { Icon: Droplet, title: 'Pure Ingredients', sub: 'No Preservatives' },
-              { Icon: Truck, title: 'Delivered Fresh', sub: 'Across India' },
-              { Icon: ShieldCheck, title: 'Secure Packaging', sub: 'Every Order' },
+              { Icon: Hand, title: 'Handmade', sub: 'Small Batch Crafted' },
+              { Icon: Droplet, title: 'Pure Desi Ghee', sub: 'No Preservatives' },
+              { Icon: Truck, title: 'Pan India Delivery', sub: 'Fast & Reliable' },
+              { Icon: ShieldCheck, title: 'Secure Packaging', sub: 'Freshness Guaranteed' },
             ].map(({ Icon, title, sub }) => (
               <div key={title} className="flex flex-col items-center text-center px-4">
                 <Icon className="w-7 h-7 text-gold mb-3" strokeWidth={1} />
@@ -97,20 +97,19 @@ export default function HomePage({ navigate }: { navigate: (page: string) => voi
               <span className="font-sc text-terracotta text-[11px] tracking-[0.25em] uppercase mb-4 block">Our Story</span>
               <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-light mb-8 text-text-dark">A Legacy Born in 1958</h2>
               <div className="space-y-5 text-text-dark/80 text-sm md:text-base leading-relaxed max-w-lg mb-10 font-light">
-                <p>Papriwale began as a small sweet shop in Buxar, founded by Badrinarayan ji with a simple belief — that true sweetness comes from purity, tradition, and honesty.</p>
-                <p>What started as handmade papri for local festivals is today a cherished tradition passed down through generations, bringing the authentic taste of Buxar to homes near and far.</p>
+                <p>Papriwale was founded in 1958 by Shri Badrinarayan Prasad ji in the historic city of Buxar, Bihar. With pure desi ghee, natural sugars, and a devotion to quality, he crafted papri that became the pride of the region.</p>
+                <p>Today, three generations later, we deliver the same authentic taste — handmade in small batches, packed with care, and shipped across India and worldwide.</p>
               </div>
               <button onClick={() => navigate('about')} className="border border-terracotta text-terracotta hover:bg-terracotta hover:text-white transition-colors px-8 py-4 font-sc text-[11px] tracking-[0.25em] uppercase">
                 Know Our Journey
               </button>
             </div>
             <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative max-w-md w-full bg-cream p-4 shadow-xl rotate-2">
-                <img src="https://images.unsplash.com/photo-1518002171953-a080ee817e1f?q=80&w=800&auto=format&fit=crop" alt="Vintage sweet shop" className="w-full h-auto object-cover grayscale opacity-90" />
+              <div className="relative max-w-md w-full bg-cream p-6 shadow-xl rotate-2 flex flex-col items-center">
+                <img src="/logo.png" alt="Papriwale Logo" className="w-full h-auto object-contain" />
                 <div className="absolute inset-0 border border-white/40 pointer-events-none m-4"></div>
-                <div className="mt-4 text-center pb-2">
-                  <p className="font-serif text-lg">पपरीवाले</p>
-                  <p className="font-sc text-[9px] tracking-[0.25em] uppercase text-text-dark/50 mt-1">ESTD. 1958</p>
+                <div className="mt-2 text-center pb-2">
+                  <p className="font-sc text-[9px] tracking-[0.25em] uppercase text-text-dark/50">ESTD. 1958 · BUXAR, BIHAR</p>
                 </div>
               </div>
             </div>
@@ -168,9 +167,9 @@ export default function HomePage({ navigate }: { navigate: (page: string) => voi
               <div className="text-gold/20 font-serif text-9xl absolute -top-8 -left-4 md:-left-8 select-none leading-none">"</div>
               <div className="relative z-10 pl-4 md:pl-8">
                 <p className="font-serif italic text-2xl md:text-3xl lg:text-4xl text-cream leading-relaxed mb-6 font-light">
-                  The taste takes me back to my childhood in Bihar. Nothing compares to the authentic flavor of Papriwale papri. Pure, traditional, and simply the best!
+                  The taste takes me back to my childhood in Bihar. Nothing compares to the authentic flavor of Papriwale papri — pure, traditional, and simply the best!
                 </p>
-                <p className="font-sc text-[10px] tracking-[0.22em] uppercase text-cream/80">— Anjali S., New Jersey, USA</p>
+                <p className="font-sc text-[10px] tracking-[0.22em] uppercase text-cream/80">— Verified Customer, New Jersey, USA</p>
               </div>
             </div>
           </div>
@@ -182,10 +181,10 @@ export default function HomePage({ navigate }: { navigate: (page: string) => voi
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
             {[
-              { Icon: Truck, title: 'Pan India Delivery', sub: 'Fast & reliable delivery across India' },
-              { Icon: Globe, title: 'Worldwide Shipping', sub: "Bringing Buxar's taste to your doorstep" },
-              { Icon: Gift, title: 'Festival Specials', sub: 'Perfect for gifting and celebrations' },
-              { Icon: ShieldCheck, title: 'Secure Packaging', sub: 'Packed with care to retain freshness' },
+              { Icon: Truck, title: 'Pan India Delivery', sub: 'Delivered to your doorstep across India' },
+              { Icon: Globe, title: 'International Shipping', sub: 'USA, Canada, UK, UAE & more' },
+              { Icon: Gift, title: 'Festival Gift Boxes', sub: 'Curated hampers for every occasion' },
+              { Icon: ShieldCheck, title: 'Freshness Guaranteed', sub: '30-day shelf life, packed with care' },
             ].map(({ Icon, title, sub }) => (
               <div key={title} className="flex items-start">
                 <Icon className="w-5 h-5 text-gold mt-1 mr-4 shrink-0" strokeWidth={1.5} />

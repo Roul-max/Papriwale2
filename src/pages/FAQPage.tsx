@@ -6,7 +6,7 @@ const faqs = [
   {
     category: 'Orders & Delivery',
     items: [
-      { q: 'How long does delivery take?', a: 'Orders within India are typically delivered within 3–7 business days depending on your location. Metro cities usually receive orders within 3–4 days. International orders take 10–15 business days.' },
+      { q: 'How long does delivery take?', a: 'Orders within India are typically delivered within 5–7 business days depending on your location. Metro cities usually receive orders within 3–5 days. International orders take 10–15 business days.' },
       { q: 'Do you deliver internationally?', a: 'Yes! We ship to the USA, Canada, UK, UAE, Australia, and several other countries. International shipping charges are calculated at checkout based on your location and order weight.' },
       { q: 'What is the minimum order value?', a: 'There is no minimum order value for domestic orders. For international orders, a minimum order of ₹2,000 applies to ensure the papri reaches you in optimal condition.' },
       { q: 'Can I track my order?', a: 'Yes. Once your order is dispatched, you will receive a tracking number via email and SMS. You can use this to track your shipment in real time.' },
@@ -24,8 +24,8 @@ const faqs = [
   {
     category: 'Gifting & Bulk Orders',
     items: [
-      { q: 'Do you offer custom gift packaging?', a: 'Yes! We offer beautiful traditional gift boxes for festivals and special occasions. You can also request custom branding for corporate gifting. Please contact us at hello@papriwale.com for bulk and custom orders.' },
-      { q: 'Is there a discount for bulk orders?', a: 'Yes, we offer special pricing for bulk orders above 5kg. Please reach out to us directly at hello@papriwale.com or call +91 91552 22222 to discuss your requirements.' },
+              { q: 'Do you offer custom gift packaging?', a: 'Yes! We offer beautiful traditional gift boxes for festivals and special occasions. You can also request custom branding for corporate gifting. Please contact us at saurabhsakg@gmail.com for bulk and custom orders.' },
+              { q: 'Is there a discount for bulk orders?', a: 'Yes, we offer special pricing for bulk orders. Please reach out to us directly at saurabhsakg@gmail.com or call +91 9955756111 to discuss your requirements.' },
       { q: 'Can I place an order for a wedding or event?', a: 'Absolutely! We regularly fulfill orders for weddings, corporate events, and festivals. We recommend placing event orders at least 2 weeks in advance to ensure timely delivery.' },
     ],
   },
@@ -99,8 +99,8 @@ export default function FAQPage() {
           <h3 className="font-serif text-3xl md:text-4xl font-light mb-4 text-text-dark">Still Have Questions?</h3>
           <p className="text-text-dark/80 text-sm leading-relaxed mb-8 font-light">Our team is happy to help. Reach out to us and we will get back to you within 24 hours.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:hello@papriwale.com" className="bg-terracotta text-white hover:bg-terracotta-dark transition-colors px-8 py-4 font-sc text-[11px] tracking-[0.25em] uppercase">Email Us</a>
-            <a href="tel:+919155222222" className="border border-terracotta text-terracotta hover:bg-terracotta hover:text-white transition-colors px-8 py-4 font-sc text-[11px] tracking-[0.25em] uppercase">Call Us</a>
+            <a href="mailto:saurabhsakg@gmail.com" className="bg-terracotta text-white hover:bg-terracotta-dark transition-colors px-8 py-4 font-sc text-[11px] tracking-[0.25em] uppercase">Email Us</a>
+            <a href="tel:+919955756111" className="border border-terracotta text-terracotta hover:bg-terracotta hover:text-white transition-colors px-8 py-4 font-sc text-[11px] tracking-[0.25em] uppercase">Call Us</a>
           </div>
         </div>
       </section>

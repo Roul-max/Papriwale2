@@ -4,12 +4,12 @@ import { motion } from 'motion/react';
 import { useApp } from '../context/AppContext';
 
 const products = [
-  { id: 1, name: 'Classic Papri', price: 450, weight: '500g', tag: 'Bestseller', desc: 'The original Papriwale recipe — crispy, golden papri made with pure ghee and a hint of cardamom. A timeless classic.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvp7w69wWbNoO5smD9AVAQ313z-jNjntv4cbdqlidsVA&s=10' },
-  { id: 2, name: 'Elaichi Papri', price: 480, weight: '500g', tag: 'Popular', desc: 'Infused with the finest green cardamom, this papri carries a fragrant warmth that lingers long after the last bite.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl7YyCLadFYJ1ecU7b9WKC5iuU2DQZYGbqIE0qpIqoLQ&s=10' },
-  { id: 3, name: 'Gur Papri', price: 480, weight: '500g', tag: 'Seasonal', desc: 'Sweetened with pure jaggery sourced from local farms, this papri is rich, earthy, and deeply nourishing.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGlD8cjbdbXivGiDGi1tCx9YOFjTAOXJG47iUGfnacew&s=10' },
-  { id: 4, name: 'Til Papri', price: 450, weight: '500g', tag: 'Winter Special', desc: 'Loaded with roasted sesame seeds and natural sweetness, this papri is a winter favourite across Bihar.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTzdzpJp-Ev9AhDBPdUEvAopT9IM1yx8TSctqWyS0YQw&s=10' },
-  { id: 5, name: 'Dry Fruit Papri', price: 650, weight: '500g', tag: 'Premium', desc: 'Our most indulgent offering — classic papri studded with cashews, almonds, and pistachios. Perfect for gifting.', image: 'https://images.unsplash.com/photo-1548365328-8c6db3220e4c?q=80&w=600&auto=format&fit=crop' },
-  { id: 6, name: 'Festival Gift Box', price: 1200, weight: '1kg Assorted', tag: 'Gift', desc: 'A curated assortment of our finest papri varieties, beautifully packaged in a traditional gift box. Ideal for festivals.', image: 'https://images.unsplash.com/photo-1607344645866-009c320b63e0?q=80&w=600&auto=format&fit=crop' },
+  { id: 1, name: 'Kaju Badam Papri', price: 380, weight: '250g', tag: 'Premium', desc: 'A rich and indulgent papri crafted with whole cashews and almonds, bound together with pure desi ghee and natural sugar. Every bite delivers a satisfying crunch with the warmth of traditional sweetness.', image: 'https://i0.wp.com/papriwale.com/wp-content/uploads/2021/10/IMG_6312-copy_Original-scaled.jpg?resize=400%2C400&ssl=1' },
+  { id: 2, name: 'Kaju Papdi', price: 640, weight: '250g', tag: 'Bestseller', desc: 'Delicate, melt-in-the-mouth papdi generously loaded with premium cashews. Made with pure ghee and a perfectly balanced sweetness — a true celebration of flavour and craftsmanship.', image: 'https://i0.wp.com/papriwale.com/wp-content/uploads/2021/10/IMG_6296-copy_Original-scaled.jpg?resize=400%2C400&ssl=1' },
+  { id: 3, name: 'Special Ghee Papdi', price: 240, weight: '250g', tag: 'Popular', desc: 'Our signature papdi made with an extra generous pour of pure desi ghee, giving it an irresistibly rich flavour and a perfectly crisp texture. Simple, honest, and deeply satisfying.', image: 'https://i0.wp.com/papriwale.com/wp-content/uploads/2021/10/IMG_6291-copy_Original-scaled.jpg?resize=400%2C400&ssl=1' },
+  { id: 4, name: 'Dry Fruit Papri', price: 350, weight: '250g', tag: 'Premium', desc: 'Our most indulgent offering — classic papri studded with cashews, almonds, and pistachios. Perfect for gifting.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNCvgIkcCYT-CAZkQbAPgip51eSYD-PGFiIbe3QSd_I37ChRyTTMef1xS_&s=10' },
+  { id: 5, name: 'Papri', price: 380, weight: '500g', tag: 'Value Pack', desc: 'Our classic papri in a larger pack — ideal for families and frequent orders. Same authentic taste, better value.', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Jwk9j0c9y0KVIcy_i8_ecboIKlGw7MOIDq1Jh8sACA&s=10' },
+  { id: 6, name: 'Festival Gift Box', price: 799, weight: 'Assorted', tag: 'Gift', desc: 'A curated assortment of our finest papri varieties, beautifully packaged in a traditional gift box. Ideal for festivals and celebrations.', image: 'https://images.unsplash.com/photo-1607344645866-009c320b63e0?q=80&w=600&auto=format&fit=crop' },
 ];
 
 export default function ProductsPage() {
@@ -29,7 +29,7 @@ export default function ProductsPage() {
             <div className="h-px w-16 bg-gold/40"></div>
           </div>
           <p className="mt-6 text-text-dark/80 text-sm md:text-base max-w-xl mx-auto leading-relaxed font-light">
-            Every variety is made fresh in small batches using traditional methods and the purest ingredients — just as it has been since 1958.
+            Every variety is made fresh in small batches using traditional methods and pure desi ghee — just as it has been since 1958. No preservatives, no artificial flavors.
           </p>
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function ProductsPage() {
           <span className="text-gold text-2xl">❈</span>
           <h3 className="font-serif text-3xl md:text-4xl font-light mt-4 mb-4 text-text-dark">Made with Only the Finest</h3>
           <p className="text-text-dark/80 text-sm md:text-base leading-relaxed font-light">
-            All our papri are made with pure desi ghee, natural sweeteners, and hand-ground spices. No artificial colors, no preservatives, no compromises. Shelf life: 30 days from date of manufacture.
+            All our papri are made with pure desi ghee, natural sweeteners, and hand-ground spices. No artificial colors, no preservatives, no compromises. Shelf life: 30 days from date of manufacture. Store in a cool, dry place.
           </p>
         </div>
       </section>

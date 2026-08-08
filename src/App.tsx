@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   Search, User, ShoppingBag,
-  Facebook, Instagram, Send, Phone, Mail, MapPin, Menu, X
+  Instagram, Send, Phone, Mail, MapPin, Menu, X
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -12,12 +12,15 @@ import BlogPage from './pages/BlogPage';
 import TestimonialsPage from './pages/TestimonialsPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
+import TermsPage from './pages/TermsPage';
+import PrivacyPage from './pages/PrivacyPage';
+import ReturnPolicyPage from './pages/ReturnPolicyPage';
 import CartDrawer from './components/CartDrawer';
 import SearchOverlay from './components/SearchOverlay';
 import ProfileDrawer from './components/ProfileDrawer';
 import { useApp } from './context/AppContext';
 
-type Page = 'home' | 'about' | 'products' | 'blog' | 'testimonials' | 'faq' | 'contact';
+type Page = 'home' | 'about' | 'products' | 'blog' | 'testimonials' | 'faq' | 'contact' | 'terms' | 'privacy' | 'returns';
 
 const navLinks: { label: string; page: Page }[] = [
   { label: 'Home', page: 'home' },
@@ -53,6 +56,9 @@ export default function App() {
       case 'testimonials': return <TestimonialsPage />;
       case 'faq': return <FAQPage />;
       case 'contact': return <ContactPage />;
+      case 'terms': return <TermsPage />;
+      case 'privacy': return <PrivacyPage />;
+      case 'returns': return <ReturnPolicyPage />;
       default: return <HomePage navigate={navigate} />;
     }
   };
@@ -63,7 +69,7 @@ export default function App() {
       {/* Top Utility Bar */}
       <div className="w-full bg-terracotta-dark text-white text-[10px] md:text-[11px] tracking-[0.2em] uppercase py-2 px-4 font-sc">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center gap-1 md:gap-0">
-          <span>Celebrating 65+ Years of Sweet Heritage from Buxar, Bihar</span>
+          <span>Celebrating 66+ Years of Sweet Heritage from Buxar, Bihar</span>
           <span>Delivering Tradition Across India & Worldwide</span>
         </div>
       </div>
@@ -144,17 +150,16 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-cream-light pt-20 pb-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-blush/30 pt-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
 
             <div className="space-y-6">
               <img src="/logo.png" alt="Papriwale Logo" className="h-28 w-auto object-contain -ml-2" />
               <p className="text-sm text-text-dark/80 leading-relaxed max-w-xs font-medium">
-                Traditional sweetness since 1958. Handmade papri from Buxar, Bihar, with love and legacy.
+                Traditional sweetness since 1958. Handmade papri from Buxar, Bihar, with pure desi ghee and 66+ years of legacy.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-text-dark hover:bg-gold hover:text-white transition-colors"><Facebook className="w-4 h-4" /></a>
-                <a href="#" className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-text-dark hover:bg-gold hover:text-white transition-colors"><Instagram className="w-4 h-4" /></a>
-                <a href="#" className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-text-dark hover:bg-gold hover:text-white transition-colors"><Phone className="w-4 h-4" /></a>
+                <a href="https://www.instagram.com/badrinarayan_papriwale_ltd/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-text-dark hover:bg-gold hover:text-white transition-colors"><Instagram className="w-4 h-4" /></a>
+                <a href="https://api.whatsapp.com/send/?phone=7004220994&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gold/40 flex items-center justify-center text-text-dark hover:bg-gold hover:text-white transition-colors"><Phone className="w-4 h-4" /></a>
               </div>
             </div>
 
@@ -170,10 +175,26 @@ export default function App() {
             </div>
 
             <div>
+              <h4 className="font-sc text-[12px] tracking-[0.2em] uppercase font-bold mb-6 text-text-dark">Company</h4>
+              <ul className="space-y-3">
+                {[
+                  { label: 'Terms & Conditions', page: 'terms' },
+                  { label: 'Privacy Policy', page: 'privacy' },
+                  { label: 'Return Policy', page: 'returns' },
+                ].map(({ label, page }) => (
+                  <li key={page}>
+                    <button onClick={() => navigate(page)} className="text-sm text-text-dark/80 hover:text-terracotta transition-colors font-medium tracking-wide">{label}</button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
               <h4 className="font-sc text-[12px] tracking-[0.2em] uppercase font-bold mb-6 text-text-dark">Contact Us</h4>
               <ul className="space-y-4">
-                <li className="flex items-start"><Phone className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/85 font-medium">+91 91552 22222</span></li>
-                <li className="flex items-start"><Mail className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/85 font-medium">hello@papriwale.com</span></li>
+                <li className="flex items-start"><Phone className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/85 font-medium">+91 9955756111</span></li>
+                <li className="flex items-start"><Phone className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/85 font-medium">+91 7004220994</span></li>
+                <li className="flex items-start"><Mail className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/85 font-medium">saurabhsakg@gmail.com</span></li>
                 <li className="flex items-start"><MapPin className="w-4 h-4 text-terracotta mt-0.5 mr-3 shrink-0" /><span className="text-sm text-text-dark/85 font-medium">Papriwale Sweets, Buxar, Bihar - 802101, India</span></li>
               </ul>
             </div>
@@ -194,9 +215,11 @@ export default function App() {
           <div className="border-t border-gold/20 pt-6 flex flex-col md:flex-row justify-between items-center font-sc text-[11px] tracking-[0.15em] text-text-dark/70 gap-4 md:gap-0">
             <p>&copy; 2026 Papriwale. All Rights Reserved.</p>
             <div className="space-x-4">
-              <a href="#" className="hover:text-terracotta transition-colors">Privacy Policy</a>
+              <button onClick={() => navigate('privacy')} className="hover:text-terracotta transition-colors">Privacy Policy</button>
               <span>|</span>
-              <a href="#" className="hover:text-terracotta transition-colors">Terms & Conditions</a>
+              <button onClick={() => navigate('terms')} className="hover:text-terracotta transition-colors">Terms &amp; Conditions</button>
+              <span>|</span>
+              <button onClick={() => navigate('returns')} className="hover:text-terracotta transition-colors">Return Policy</button>
             </div>
           </div>
         </div>
