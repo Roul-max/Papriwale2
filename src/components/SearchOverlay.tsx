@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useApp } from '../context/AppContext';
 
 const allProducts = [
-  { id: 1, name: 'Classic Papri', price: 450, weight: '500g', tag: 'Bestseller', image: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=200&auto=format&fit=crop' },
-  { id: 2, name: 'Elaichi Papri', price: 480, weight: '500g', tag: 'Popular', image: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=200&auto=format&fit=crop' },
-  { id: 3, name: 'Gur Papri', price: 480, weight: '500g', tag: 'Seasonal', image: 'https://images.unsplash.com/photo-1605856422204-748eb27685ff?q=80&w=200&auto=format&fit=crop' },
-  { id: 4, name: 'Til Papri', price: 450, weight: '500g', tag: 'Winter Special', image: 'https://images.unsplash.com/photo-1621236166409-7eeb99276949?q=80&w=200&auto=format&fit=crop' },
-  { id: 5, name: 'Dry Fruit Papri', price: 650, weight: '500g', tag: 'Premium', image: 'https://images.unsplash.com/photo-1548365328-8c6db3220e4c?q=80&w=200&auto=format&fit=crop' },
-  { id: 6, name: 'Festival Gift Box', price: 1200, weight: '1kg Assorted', tag: 'Gift', image: 'https://images.unsplash.com/photo-1607344645866-009c320b63e0?q=80&w=200&auto=format&fit=crop' },
+  { id: 1, name: 'Kaju Badam Papri', price: 380, weight: '250g', tag: 'Premium', image: 'https://i0.wp.com/papriwale.com/wp-content/uploads/2021/10/IMG_6312-copy_Original-scaled.jpg?resize=400%2C400&ssl=1' },
+  { id: 2, name: 'Kaju Papdi', price: 640, weight: '250g', tag: 'Bestseller', image: 'https://i0.wp.com/papriwale.com/wp-content/uploads/2021/10/IMG_6296-copy_Original-scaled.jpg?resize=400%2C400&ssl=1' },
+  { id: 3, name: 'Special Ghee Papdi', price: 240, weight: '250g', tag: 'Popular', image: 'https://i0.wp.com/papriwale.com/wp-content/uploads/2021/10/IMG_6291-copy_Original-scaled.jpg?resize=400%2C400&ssl=1' },
+  { id: 4, name: 'Dry Fruit Papri', price: 350, weight: '250g', tag: 'Premium', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNCvgIkcCYT-CAZkQbAPgip51eSYD-PGFiIbe3QSd_I37ChRyTTMef1xS_&s=10' },
+  { id: 5, name: 'Papri', price: 380, weight: '500g', tag: 'Value Pack', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-Jwk9j0c9y0KVIcy_i8_ecboIKlGw7MOIDq1Jh8sACA&s=10' },
+  { id: 6, name: 'Festival Gift Box', price: 799, weight: 'Assorted', tag: 'Gift', image: 'https://images.unsplash.com/photo-1607344645866-009c320b63e0?q=80&w=200&auto=format&fit=crop' },
 ];
 
 const pages = [
@@ -88,7 +88,7 @@ export default function SearchOverlay({ navigate }: Props) {
                 <div className="px-5 py-8 text-center">
                   <p className="text-text-dark/40 text-sm">Start typing to search products and pages...</p>
                   <div className="mt-6 flex flex-wrap gap-2 justify-center">
-                    {['Classic Papri', 'Gur Papri', 'Gift Box', 'About', 'Blog'].map(s => (
+                    {['Kaju Papdi', 'Dry Fruit Papri', 'Gift Box', 'About', 'Blog'].map(s => (
                       <button key={s} onClick={() => setQuery(s)} className="text-[10px] tracking-widest uppercase border border-gold/30 px-3 py-1.5 text-text-dark/60 hover:border-terracotta hover:text-terracotta transition-colors">
                         {s}
                       </button>
